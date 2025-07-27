@@ -9,29 +9,127 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body style="background:#f1f3f6;">
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center" href="index.html">
-        <img src="https://image.pitchbook.com/tShvxlSqc5whgHOCsyQA5WUh4TK1703172089097_200x200" alt="Logo" width="120" class="me-2">
-      </a>
-      <form class="d-flex flex-grow-1 mx-3">
-        <input class="form-control me-2 search-bar" type="search" placeholder="Search for Products, Brands and More" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
-      </form>
-      <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
-        <li class="nav-item">
-          <a class="nav-link text-primary fw-bold" href="login.html"><i class="fa-regular fa-user"></i> Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link text-dark" href="#"><i class="fa-solid fa-store"></i> Become a Seller</a>
-        </li>
-      </ul>
+  <!-- Flipkart Header -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top py-2">
+    <div class="container-fluid" style="padding: 0 16px; max-width: 1248px; margin: 0 auto;">
+      <!-- Mobile Layout -->
+      <div class="d-flex align-items-center justify-content-between w-100 d-lg-none">
+        <button class="btn p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+          <i class="fas fa-bars fs-5"></i>
+        </button>
+        <a class="navbar-brand d-flex align-items-center flex-grow-1" href="index.html">
+         <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="">
+        </a>
+        <div class="d-flex align-items-center">
+          <a href="login.html" class="text-dark me-3 position-relative"><i class="fa-regular fa-user fs-5"></i></a>
+          <a href="cart.html" class="text-dark position-relative">
+            <i class="fa-solid fa-cart-shopping fs-5"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 10px;">2</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Mobile Search Bar -->
+      <div class="mobile-search d-block d-lg-none bg-white px-3 py-2 border-top">
+        <form class="d-flex">
+          <input class="form-control form-control-sm" type="search" placeholder="Search for Products, Brands and More" aria-label="Search">
+          <button class="btn btn-outline-primary btn-sm ms-2" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+
+      <!-- Desktop Layout -->
+      <div class="d-none d-lg-flex align-items-center w-100 desktop-header">
+        <!-- Flipkart Logo -->
+        <div class="navbar-brand-container me-4 ">
+          <a class="navbar-brand d-flex align-items-baseline text-decoration-none" href="index.html">
+            <div class="explore-plus-container ms-2 w-100">
+              <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/fkheaderlogo_exploreplus-44005d.svg" alt="">
+            </div>
+          </a>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container flex-grow-1 mx-1 me-5">
+          <form class="search-form">
+            <div class="search-input-group">
+              <i class="fas fa-search search-icon"></i>
+              <input class="search-input" type="search" placeholder="Search for Products, Brands and More" aria-label="Search">
+            </div>
+          </form>
+        </div>
+        
+        <!-- Right Navigation -->
+        <div class="nav-right-section d-flex align-items-center">
+          <!-- Login Dropdown -->
+          <div class="nav-item-container dropdown me-4">
+            <a class="nav-link-custom dropdown-toggle d-flex align-items-center" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             <i class="fa-solid fa-circle-user"></i>
+              <span class="nav-text">Flipkart</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end nav-dropdown" aria-labelledby="profileDropdown">
+              <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user me-2"></i>My Profile</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-coins me-2 text-warning"></i>SuperCoin Zone</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gem me-2 text-primary"></i>Flipkart Plus Zone</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-box me-2"></i>Orders</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-regular fa-heart me-2"></i>Wishlist</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-ticket me-2"></i>Coupons</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-regular fa-credit-card me-2"></i>Gift Cards</a></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-regular fa-bell me-2"></i>Notifications</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
+            </ul>
+          </div>
+          
+          <!-- Cart -->
+          <div class="nav-item-container me-4">
+            <a class="nav-link-custom position-relative d-flex align-items-center" href="./cart.html">
+              <i class="fa-solid fa-cart-shopping nav-icon me-2"></i>
+              <span class="nav-text">Cart</span>
+              <span class="cart-badge">2</span>
+            </a>
+          </div>
+          
+          <!-- Become a Seller -->
+          <div class="nav-item-container me-4">
+            <a class="nav-link-custom d-flex align-items-center" href="#">
+              <i class="fa-solid fa-store nav-icon me-2"></i>
+              <span class="nav-text">Become a Seller</span>
+            </a>
+          </div>
+          
+          <!-- More Menu -->
+          <div class="nav-item-container">
+            <a class="nav-link-custom" href="#">
+              <i class="fa-solid fa-ellipsis-vertical nav-icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title text-primary fw-bold">Flipkart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-regular fa-user me-2"></i>My Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-coins me-2 text-warning"></i>SuperCoin Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-gem me-2 text-primary"></i>Flipkart Plus Zone</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-box me-2"></i>Orders</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-heart me-2"></i>Wishlist</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-ticket me-2"></i>Coupons</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-credit-card me-2"></i>Gift Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-regular fa-bell me-2"></i>Notifications</a></li>
+        <hr>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-store me-2"></i>Become a Seller</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Logout</a></li>
+      </ul>
+    </div>
+  </div>
 
   <div class="container py-4">
     <div class="row g-4">
